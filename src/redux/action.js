@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = `https://app-dogs-dp.herokuapp.com/`
+const url = `https://app-dogs-dp.herokuapp.com`
 
 export function getDogs() {
   return async function (dispach) {
