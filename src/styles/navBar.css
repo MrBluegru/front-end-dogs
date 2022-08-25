@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+}
+
+.selectNavB {
+  font-size: 1.3rem;
+  margin: 2px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgb(25, 71, 123);
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+
+.selectNavB:hover {
+  background-color: rgb(178, 125, 230);
+  color:black;
+}

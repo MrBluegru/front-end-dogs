@@ -1,0 +1,51 @@
+.createOk {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 80%),
+    url("../img/mk7.gif");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+}
+
+.newD {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.btns {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+}
+
+.btnGoH {
+  margin: 5px;
+  font-size: 2rem;
+  border-radius: 5px;
+  background-color: rgb(25, 71, 123);
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+.btnGoH:hover {
+  background-color: #fff;
+  color: rgb(54, 113, 173);
+}
+
+.btnAdd {
+  margin: 5px;
+  font-size: 2rem;
+  border-radius: 5px;
+  background-color: rgb(178, 125, 230);
+  border: none;
+  padding: 5px;
+}
+.btnAdd:hover {
+  background-color: #fff;
+  color: rgb(178, 125, 230);
+}

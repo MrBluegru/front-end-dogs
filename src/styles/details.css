@@ -1,0 +1,87 @@
+.detailsD {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 80%),
+    url("../img/mk3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  overflow-y: scroll;
+}
+
+.detaisS {
+  background-color: rgba(68, 93, 194, 0.361);
+  backdrop-filter: blur(8px);
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  color: #fff;
+  padding-bottom: 8rem 
+}
+
+.btnB {
+  margin-top: 3px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  border-radius: 100%;
+  background-color: rgb(68, 93, 194);
+  color: #fff;
+  border: none;
+}
+
+.btnB:hover {
+  font-size: 1.2rem;
+  background-color: rgb(211, 73, 209);
+}
+
+.nameTitle {
+  font-size: 2rem;
+}
+
+.titleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.imgD {
+  height: 465px;
+  min-height: 265px;
+  border-radius: 5px;
+}
+
+.hAndW {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.hDg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.wDg {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.temperG {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.lifeSD {
+  margin-bottom: 10px;
+}
+
+.temperText {
+  font-weight: 700;
+}
+
+.hwText {
+  font-weight: 700;
+}

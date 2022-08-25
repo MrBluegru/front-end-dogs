@@ -1,0 +1,239 @@
+.formCreate {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 100%),
+    url("../img/mk5.jpg");
+  background-size: cover;
+  object-fit: contain;
+  overflow-y: scroll;
+}
+
+.homeLink {
+  text-decoration: none;
+}
+
+.titulo {
+  margin-top: 1rem;
+  display: flex;
+  color: rgb(25, 71, 123);
+}
+
+.volver {
+  margin-top: 1rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  background-color: rgba(178, 125, 230, 0.605);
+  cursor: pointer;
+  border: none;
+}
+
+.volver:hover{
+  background-color: rgb(166, 236, 156);
+}
+
+.nameF {
+  display: flex;
+  flex-direction: column;
+  grid-area: nameArea;
+  height: 110px;
+}
+
+.imgF {
+  display: flex;
+  flex-direction: column;
+  grid-area: imgArea;
+  height: 110px;
+}
+.minHF {
+  display: flex;
+  flex-direction: column;
+  grid-area: minHArea;
+  height: 120px;
+}
+.maxHF {
+  display: flex;
+  flex-direction: column;
+  grid-area: maxHArea;
+  height: 120px;
+}
+.minWf {
+  display: flex;
+  flex-direction: column;
+  grid-area: minWArea;
+  height: 120px;
+}
+.maxWf {
+  display: flex;
+  flex-direction: column;
+  grid-area: maxWArea;
+  height: 120px;
+}
+.minLSf {
+  display: flex;
+  flex-direction: column;
+  grid-area: minLSArea;
+  height: 120px;
+}
+.maxLSf {
+  display: flex;
+  flex-direction: column;
+  grid-area: maxLSArea;
+  height: 120px;
+}
+.temperF {
+  grid-area: temperArea;
+}
+.btnCf {
+  grid-area: btnArea;
+}
+
+.titleHeight {
+  grid-area: titleHeight;
+  background-color: rgba(177, 125, 230, 0.489);
+  border-radius: 5px;
+  margin: 10px;
+  color: black;
+  backdrop-filter: blur(1px);
+}
+
+.titleWeight {
+  grid-area: titleWeight;
+  border-radius: 5px;
+  background-color: rgba(177, 125, 230, 0.489);
+  margin: 10px;
+  color: black;
+  backdrop-filter: blur(1px);
+}
+
+.titleLS {
+  grid-area: titleLS;
+  border-radius: 5px;
+  background-color: rgba(177, 125, 230, 0.489);
+  margin: 10px;
+  color: black;
+  backdrop-filter: blur(1px);
+}
+
+.btnSCF {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(25, 71, 123, 0.742);
+  color: #fff;
+  border: none;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.btnSCF:hover {
+  background-color: rgba(177, 125, 230, 0.489);
+  color: black;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.btnSCF:disabled {
+  background-color: rgb(0, 0, 0);
+  color: red;
+  cursor: no-drop;
+}
+
+.createForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "nameArea imgArea"
+    "titleHeight titleHeight"
+    "minHArea maxHArea"
+    "titleWeight titleWeight"
+    "minWArea maxWArea"
+    "titleLS titleLS"
+    "minLSArea maxLSArea"
+    "temperArea temperArea"
+    "btnArea btnArea";
+  padding: 1.5rem;
+  color: #fff;
+  width: 550px;
+  border-radius: 15px;
+  background-color: rgba(25, 71, 123, 0.612);
+  backdrop-filter: blur(15px);
+}
+
+.inputFC {
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.selectFC {
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: 2px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(25, 71, 123, 0.742);
+  color: #fff;
+  border: none;
+  backdrop-filter: blur(10px);
+}
+
+.selectFC:hover {
+  background-color: rgba(178, 125, 230, 0.605);
+  text-align: center;
+  color: black;
+  backdrop-filter: blur(10px);
+}
+
+.threeColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-template-areas: "imgColumn1 formularioC2 temperC3";
+}
+
+.imgColum1 {
+  grid-area: imgColumn1;
+}
+
+.formmC2 {
+  grid-area: formularioC2;
+}
+
+.tempersSelectsC3 {
+  grid-area: temperC3;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  background-color: rgba(25, 71, 123, 0.443);
+  backdrop-filter: blur(10px);
+}
+
+.btnsTemps {
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(68, 93, 194, 0.742);
+  border: none;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  color: #fff;
+}
+
+.btnsTemps:hover {
+  background-color: rgb(205, 33, 21);
+  color: black;
+}
+
+.errorsMsj {
+  margin-top: 1px;
+}
