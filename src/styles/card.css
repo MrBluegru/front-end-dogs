@@ -49,6 +49,7 @@
   width: 100%;
   margin-top: 1px;
   min-height: 100px;
+  max-height: 100px;
 }
 
 .title-MaxH {
