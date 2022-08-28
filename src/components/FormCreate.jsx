@@ -130,8 +130,12 @@ const FormCreate = () => {
     }
   };
   const validacionTempers = (entrada) => {
-    if (entrada.length < 1)
-      return `Se requiere que almenos tenga un temperamento`;
+    if (entrada.length < 1) {
+      return `Se requiere que al menos tenga un temperamento`;
+    }
+    if (entrada.length > 15) {
+      return `No se pueden seleccionar mas de 15 temperamentos`;
+    }
   };
   const validacionMinLifeSpan = (entrada1, entrada2) => {
     if (entrada1 < 6) return `El valor minimo no puede ser menor a 6 años.`;
@@ -326,7 +330,13 @@ const FormCreate = () => {
                   Select a temperament
                 </option>
                 {dogsT.map((e) => {
-                  if (!input.temper.includes(e.name)) {
+                  if (input.temper.length > 15) {
+                    return (
+                      <option disabled="disabled" default={true} value="">
+                        Limite de 15 temperamentos alcanzado
+                      </option>
+                    );
+                  } else if (!input.temper.includes(e.name)) {
                     return (
                       <option value={e.name} key={e.id}>
                         {e.name}
