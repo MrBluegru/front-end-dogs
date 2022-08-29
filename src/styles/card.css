@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   justify-items: center;
-  margin: 2rem;
+  margin: 1rem;
   padding: 5px;
   background-color: rgba(25, 71, 123, 0.772);
   width: 410px;
@@ -15,8 +15,8 @@
 }
 
 .card:hover {
-  background-color: rgba(178, 125, 230, 0.408);
-  backdrop-filter: blur(25px);
+  background-color: rgba(103, 233, 247, 0.637);
+  backdrop-filter: blur(15px);
   border-radius: 20px;
 }
 
@@ -31,10 +31,11 @@
 .nameCard {
   display: flex;
   justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
   align-items: center;
   border-width: 1px;
   font-size: 1.5rem;
-  font-weight: 800;
   height: 5%;
   width: 100%;
 }

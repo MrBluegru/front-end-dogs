@@ -1,0 +1,76 @@
+.card {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+  margin: 1rem;
+  padding: 5px;
+  background-color: rgba(25, 71, 123, 0.772);
+  width: 410px;
+  height: 550px;
+  min-width: 400px;
+  min-height: 550px;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  color: #fff;
+}
+
+.card:hover {
+  color: black;
+  background-color: rgba(103, 233, 247, 0.637);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+}
+
+.divImgCard {
+  /* width: 360px; */
+  /* min-width: 360px; */
+  height: 230px;
+  min-height: 230px;
+  border-radius: 5px;
+}
+
+.nameCard {
+  display: flex;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 800;
+  align-items: center;
+  border-width: 1px;
+  font-size: 1.5rem;
+  height: 5%;
+  width: 100%;
+}
+.temperCard {
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+.tempersCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5rem 1.5rem 1.5rem 1.5rem 1.5rem;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.title-MaxH {
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.weightCard {
+  font-size: 1.2rem;
+  margin-top: 1px;
+}
+
+.linkCard {
+  text-decoration: none;
+  color: #fff;
+}
+
+.linkCard:hover {
+  color: black;
+}

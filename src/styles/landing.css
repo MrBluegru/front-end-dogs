@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:  linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 100%),
-    url("../img/mk1.jpg");
+  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 100%),
+    url("../img/mk2.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center;
@@ -13,9 +13,15 @@
 }
 
 .welc {
+  font-family: "Ubuntu", sans-serif;
   color: rgb(255, 255, 255);
   font-weight: bolder;
-  font-size: 4.5rem;
+  font-size: 5rem;
+}
+
+.divGo {
+  height: 100px;
+  max-height: 100px;
 }
 
 .go {
@@ -24,14 +30,17 @@
   font-size: 2.5rem;
   border-radius: 15px;
   cursor: pointer;
-  background-color: rgb(178, 125, 230);
+  background-color: rgba(25, 71, 123, 0.772);
   color: #fff;
   border: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .go:hover {
   background-color: #fff;
-  color: rgb(178, 125, 230);
+  color: rgba(25, 71, 123, 0.772);
+  padding: 11px 21px;
+  font-family: fantasy;
 }
 
 .by {
@@ -41,9 +50,13 @@
   font-size: 2.5rem;
 }
 
-.linkA{
+.linkA {
   color: #fff;
   text-decoration: none;
 }
 
-
+.imglogo {
+  padding: 10px 20px;
+  margin-top: 3rem;
+  height: 30%;
+}

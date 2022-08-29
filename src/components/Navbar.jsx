@@ -87,8 +87,8 @@ const Navbar = () => {
         <option disabled="disabled" default={true} value="">
           Filter by breed
         </option>
-        <option value="api"> of API </option>
-        <option value="db"> of DB </option>
+        <option value="api"> Breed existent </option>
+        <option value="db"> New breed </option>
       </select>
     </div>
   );

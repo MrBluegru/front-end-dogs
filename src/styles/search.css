@@ -5,6 +5,7 @@
   border-radius: 10px;
   font-weight: 800;
   border: none;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .searchInput:focus {

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { getTempers, createDogs } from "../redux/action";
-import Card from "../components/Card";
+import CardCD from "../components/CardCD";
 import "../styles/formCreate.css";
 
 const FormCreate = () => {
@@ -104,6 +104,7 @@ const FormCreate = () => {
     if (!regexS.url.test(entrada)) return `Debe ser una url valida`;
   };
   const validacionMinHeight = (entrada1, entrada2) => {
+    if (isNaN(entrada1)) return `Este campo debe completarse`;
     if (entrada1 < 15) return `El valor minimo no puede ser menor a 15 cm.`;
     if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 cm.`;
     if (entrada1 > entrada2) {
@@ -111,12 +112,14 @@ const FormCreate = () => {
     }
   };
   const validacionMaxHeigh = (entrada1, entrada2) => {
+    if (isNaN(entrada2)) return `Este campo debe completarse`;
     if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 cm.`;
     if (entrada2 < entrada1) {
       return `El valor maximo no puede ser menor que el valor minimo`;
     }
   };
   const validacionMinWeight = (entrada1, entrada2) => {
+    if (isNaN(entrada1)) return `Este campo debe completarse`;
     if (entrada1 < 1) return `El valor minimo no puede ser menor a 1 kg.`;
     if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 Kg.`;
     if (entrada1 > entrada2) {
@@ -124,6 +127,7 @@ const FormCreate = () => {
     }
   };
   const validacionMaxWeight = (entrada1, entrada2) => {
+    if (isNaN(entrada2)) return `Este campo debe completarse`;
     if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 Kg.`;
     if (entrada2 < entrada1) {
       return `El valor maximo no puede ser menor que el valor minimo`;
@@ -138,6 +142,7 @@ const FormCreate = () => {
     }
   };
   const validacionMinLifeSpan = (entrada1, entrada2) => {
+    if (isNaN(entrada1)) return `Este campo debe completarse`;
     if (entrada1 < 6) return `El valor minimo no puede ser menor a 6 años.`;
     if (entrada1 > 10) return `El valor minimo no puede ser mayor a 10 años.`;
     if (entrada1 > entrada2) {
@@ -145,6 +150,7 @@ const FormCreate = () => {
     }
   };
   const validacionMaxLifeSpan = (entrada1, entrada2) => {
+    if (isNaN(entrada2)) return `Este campo debe completarse`;
     if (entrada2 > 16) return `El valor maximo no puede ser mayor a 16 años.`;
     if (entrada2 < entrada1) {
       return `El valor maximo no puede ser menor que el valor minimo`;
@@ -221,7 +227,7 @@ const FormCreate = () => {
       <div className="threeColumns">
         <div className="imgColum1">
           {input.name ? (
-            <Card
+            <CardCD
               id={input.name}
               name={input.name}
               img={input.image}

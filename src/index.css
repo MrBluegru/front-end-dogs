@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 body {
   margin: 0;
   font-family:'Ubuntu', sans-serif;
@@ -8,4 +10,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+select {
+  font-family: "Ubuntu", sans-serif;
+}
+button {
+  font-family: "Ubuntu", sans-serif;
 }

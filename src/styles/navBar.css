@@ -15,6 +15,7 @@
 }
 
 .selectNavB:hover {
-  background-color: rgb(178, 125, 230);
+  background-color: rgba(96, 236, 252, 0.817);
   color:black;
+  backdrop-filter: blur(15px);
 }

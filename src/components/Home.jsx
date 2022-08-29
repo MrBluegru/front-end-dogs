@@ -36,27 +36,12 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="title">
-        <Link to={`/`} className="linkh">
-          <p>Dogs APP</p>
-        </Link>
-      </div>
+      <Link to={`/`} className="linkh">
+        <p className="title">Dogs APP</p>
+      </Link>
 
       <div className="navBH">
         <Navbar />
-      </div>
-
-      <div className="paginado">
-        {!error.length ? (
-          <Pagination
-            dogsPerPage={dogsPerPage}
-            allDogs={allDogs.length}
-            paginado={paginado}
-            currentPage={currentPage}
-          />
-        ) : (
-          ``
-        )}
       </div>
 
       <div className="cards">
@@ -77,6 +62,18 @@ const Home = () => {
           })
         ) : (
           <Loading />
+        )}
+      </div>
+      <div className="paginado">
+        {!error.length ? (
+          <Pagination
+            dogsPerPage={dogsPerPage}
+            allDogs={allDogs.length}
+            paginado={paginado}
+            currentPage={currentPage}
+          />
+        ) : (
+          ``
         )}
       </div>
     </div>
