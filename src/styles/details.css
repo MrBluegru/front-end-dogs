@@ -39,6 +39,7 @@
 
 .nameTitle {
   font-size: 2rem;
+  font-weight: 800;
 }
 
 .titleBtn {
@@ -76,12 +77,13 @@
 
 .lifeSD {
   margin-bottom: 10px;
+  font-weight: 800;
 }
 
 .temperText {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .hwText {
-  font-weight: 700;
+  font-weight: 800;
 }
