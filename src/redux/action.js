@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = `https://back-end-dogs-production.up.railway.app`
+const url = process.env.REACT_APP_BACK_URL;
 
 export function getDogs() {
   return async function (dispach) {
@@ -14,9 +14,7 @@ export function getDogs() {
 export function getDogsName(name) {
   return async function (dispach) {
     try {
-      const response = await axios.get(
-        `${url}/dogs?name=${name}`
-      );
+      const response = await axios.get(`${url}/dogs?name=${name}`);
       return dispach({
         type: "GET_DOGS_BY_NAME",
         payload: response.data,

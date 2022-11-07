@@ -78,7 +78,7 @@ const Navbar = () => {
         </option>
         <option value="all"> All </option>
         {allTempers.map((e) => {
-          return <option value={e.name}>{e.name}</option>;
+          return <option key={e.name} value={e.name}>{e.name}</option>;
         })}
       </select>
 

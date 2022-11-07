@@ -338,7 +338,7 @@ const FormCreate = () => {
                 {dogsT.map((e) => {
                   if (input.temper.length > 15) {
                     return (
-                      <option disabled="disabled" default={true} value="">
+                      <option key={e.name} disabled="disabled" default={true} value="">
                         Limite de 15 temperamentos alcanzado
                       </option>
                     );
