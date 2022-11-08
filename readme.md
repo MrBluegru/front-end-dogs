@@ -12,13 +12,13 @@ Dogs App es una SPA sobre razas de perros, en la que se puede:
 
 ## Arrancar el proyecto de manera local
 
-0. Para acceder a la data primero deberas descargar el repo <a href="https://github.com/MrBluegru/back-end-dogs" target="_blank" rel="noreferrer">back-end-dogs</a>.
+0. Para acceder a la data primero deberas descargar el repo <a href="https://github.com/MrBluegru/back-end-dogs" target="_blank" rel="noreferrer">back-end-dogs</a>
 
-1. Instalar las dependencias, ejecuta el comando `npm install`.
+1. Instalar las dependencias, ejecuta el comando `npm install`
 
-2. Clonar el archivo `.env.template` y renombrarlo a `.env`.
+2. Clonar el archivo `.env.template` y renombrarlo a `.env`
 
-3. Ejecutar el comando npm start.
+3. Ejecutar el comando npm start
 
 ## Tecnologias usadas
 
