@@ -4,24 +4,26 @@ import "../styles/card.css";
 
 const Card = ({ id, name, img, maxWeight, temperament }) => {
   return (
-    <div className="card" key={id}>
-      <Link className="linkCard" to={`/${id}`}>
-        <p className="nameCard">{name}</p>
-
+    <Link to={`/${id}`}>
+      <div className="card" key={id}>
         <img className="divImgCard" src={img} alt={`Img of ${name}`} />
 
-        <p className="temperCard">Temperaments</p>
-        <div className="tempersCard">
-          {temperament.map((e) => {
-            return <p>✔ {e}</p>;
-          })}
-        </div>
+        <h1 className="nameCard">{name}</h1>
+
         <div>
+          <p className="temperCard">Temperaments</p>
+          <div className="tempersCard">
+            {temperament.map((e) => {
+              return <p>✔ {e}</p>;
+            })}
+          </div>
+        </div>
+        <div className="title-maxh-weig">
           <p className="title-MaxH">Max-Weight</p>
           <p className="weightCard">{maxWeight ? maxWeight : `n/a`}</p>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
