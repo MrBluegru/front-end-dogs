@@ -1,5 +1,3 @@
-@import url("index.css");
-
 .card {
   display: flex;
   flex-direction: column;
@@ -11,17 +9,17 @@
   min-height: 500px;
   border-radius: 10px;
   backdrop-filter: blur(4px);
-  background-color: var(--blue);
+  background-color: var(--blue-background);
 }
 
 .card:hover {
   backdrop-filter: blur(5px);
-  background-color: var(--cian);
+  background-color: var(--cian-background);
 }
 
-.divImgCard {
-  height: 52.5%;
-  min-height: 52.5%;
+.imgCard {
+  height: 270px;
+  max-height: 270px;
   object-fit: cover;
   border-radius: 10px 10px 0px 0px;
 }
@@ -33,6 +31,7 @@
   border-width: 1px;
   text-align: center;
   font-family: var(--type-secondary);
+  color: var(--cian);
 }
 
 .temperCard {

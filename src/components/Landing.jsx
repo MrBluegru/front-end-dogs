@@ -7,7 +7,7 @@ import React from "react";
 const Landing = () => {
   return (
     <div className="landing">
-      <div className="title">
+      <div className="title-landing">
         <p>Welcome to Dogs App</p>
       </div>
 

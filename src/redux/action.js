@@ -12,6 +12,12 @@ export function getDogs() {
   };
 }
 
+export function resetDogs() {
+  return {
+    type: "RESET_DOGS",
+  };
+}
+
 export function getDogsName(name) {
   return async function (dispach) {
     try {

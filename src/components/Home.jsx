@@ -35,46 +35,46 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
-      <Link to={`/`} className="linkh">
-        <p className="title">Dogs APP</p>
-      </Link>
+    <div className="container-home">
+      <div className="home">
+        <Link to={`/`} className="linkh">
+          <p className="title">Dogs APP</p>
+        </Link>
 
-      <div className="navBH">
         <Navbar />
-      </div>
 
-      <div className="cards">
-        {error.length ? (
-          <SNotFound />
-        ) : currentDogs.length >= 1 ? (
-          currentDogs.map((e) => {
-            return (
-              <Card
-                key={e.id}
-                id={e.id}
-                name={e.name}
-                img={e.image}
-                maxWeight={e.maxWeightKg}
-                temperament={e.temperament}
-              />
-            );
-          })
-        ) : (
-          <Loading />
-        )}
-      </div>
-      <div className="paginado">
-        {!error.length ? (
-          <Pagination
-            dogsPerPage={dogsPerPage}
-            allDogs={allDogs.length}
-            paginado={paginado}
-            currentPage={currentPage}
-          />
-        ) : (
-          ``
-        )}
+        <div className="cards">
+          {error.length ? (
+            <SNotFound />
+          ) : currentDogs.length >= 1 ? (
+            currentDogs.map((e) => {
+              return (
+                <Card
+                  key={e.id}
+                  id={e.id}
+                  name={e.name}
+                  img={e.image}
+                  maxWeight={e.maxWeightKg}
+                  temperament={e.temperament}
+                />
+              );
+            })
+          ) : (
+            <Loading />
+          )}
+        </div>
+        <div className="paginado">
+          {!error.length ? (
+            <Pagination
+              dogsPerPage={dogsPerPage}
+              allDogs={allDogs.length}
+              paginado={paginado}
+              currentPage={currentPage}
+            />
+          ) : (
+            ``
+          )}
+        </div>
       </div>
     </div>
   );

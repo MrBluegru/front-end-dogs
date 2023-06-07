@@ -4,9 +4,9 @@ import "../styles/card.css";
 
 const Card = ({ id, name, img, maxWeight, temperament }) => {
   return (
-    <Link to={`/${id}`}>
-      <div className="card" key={id}>
-        <img className="divImgCard" src={img} alt={`Img of ${name}`} />
+    <div className="card" key={id}>
+      <Link to={`/${id}`}>
+          <img className="imgCard" src={img} alt={`Img of ${name}`} />
 
         <h1 className="nameCard">{name}</h1>
 
@@ -18,12 +18,13 @@ const Card = ({ id, name, img, maxWeight, temperament }) => {
             })}
           </div>
         </div>
+
         <div className="title-maxh-weig">
           <p className="title-MaxH">Max-Weight</p>
           <p className="weightCard">{maxWeight ? maxWeight : `n/a`}</p>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

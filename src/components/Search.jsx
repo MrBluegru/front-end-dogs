@@ -23,7 +23,7 @@ const Search = () => {
           className="searchInput"
           type="text"
           value={name || "" }
-          placeholder=" 🔎 Start typing to search..."
+          placeholder=" 🔎 typing to search..."
           onChange={(e) => handleChange(e)}
         />
       </form>

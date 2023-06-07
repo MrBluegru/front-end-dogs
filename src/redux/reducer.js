@@ -98,7 +98,7 @@ export default function rootReducer(state = initialState, action) {
       } else {
         return {
           ...state,
-          dogs: state.allDogs.filter((e) => typeof(e.id) === 'number'),
+          dogs: state.allDogs.filter((e) => typeof e.id === "number"),
         };
       }
 
@@ -111,10 +111,15 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
       };
-      case "CLEAR_DETAILS":
+    case "CLEAR_DETAILS":
       return {
         ...state,
         dogsDetails: {},
+      };
+    case "RESET_DOGS":
+      return {
+        ...state,
+        dogs: state.allDogs,
       };
     default:
       return state;

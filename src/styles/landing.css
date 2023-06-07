@@ -12,7 +12,7 @@
   background-size: cover;
 }
 
-.title {
+.title-landing {
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
 }
@@ -20,7 +20,7 @@
 .btn_go {
   padding: 0.5rem;
   border-radius: 8px;
-  margin: 2rem;
+  margin: 2rem 0rem;
   cursor: pointer;
   color: "#fff";
   font-size: 2rem;
@@ -38,7 +38,7 @@
 }
 
 @media all and (max-width: 479px) {
-  .title {
+  .title-landing {
     font-size: 2rem;
   }
   .imglogo {
@@ -47,7 +47,7 @@
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
-  .title {
+  .title-landing {
     font-size: 2.6rem;
   }
 
@@ -57,8 +57,11 @@
 }
 
 @media all and (min-width: 768px) and (max-width: 959px) {
-  .title {
+  .title-landing {
     font-size: 4.4rem;
+  }
+  .btn_go {
+    margin-top: 3rem;
   }
 
   .imglogo {
@@ -67,8 +70,12 @@
 }
 
 @media all and (min-width: 960px) and (max-width: 1199px) {
-  .title {
+  .title-landing {
     font-size: 5rem;
+  }
+
+  .btn_go {
+    margin-top: 4rem;
   }
 
   .imglogo {
@@ -77,10 +84,14 @@
 }
 
 @media all and (min-width: 1200px) {
-  .title {
+  .title-landing {
     font-size: 5rem;
   }
 
+  .btn_go {
+    margin-top: 5rem;
+  }
+  
   .imglogo {
     height: 35%;
   }
