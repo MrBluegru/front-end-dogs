@@ -35,45 +35,41 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <div className="home">
-        <Link to={`/`}>
-          <p className="title">Dogs APP</p>
-        </Link>
+    <div className="home">
+      <Link to={`/`}>
+        <p className="title">Dogs APP</p>
+      </Link>
 
-        <Navbar />
+      <Navbar />
 
-        {error.length ? (
-          <SNotFound />
-        ) : currentDogs.length >= 1 ? (
-          <div className="cards">
-            {currentDogs.map((e) => {
-              return (
-                <Card
-                  key={e.id}
-                  id={e.id}
-                  name={e.name}
-                  img={e.image}
-                  maxWeight={e.maxWeightKg}
-                  temperament={e.temperament}
-                />
-              );
-            })}
-          </div>
-        ) : (
-          <Loading />
-        )}
-        {!error.length ? (
-          <Pagination
-            dogsPerPage={dogsPerPage}
-            allDogs={allDogs.length}
-            paginado={paginado}
-            currentPage={currentPage}
-          />
-        ) : (
-          ``
-        )}
-      </div>
+      {error.length ? (
+        <SNotFound />
+      ) : currentDogs.length >= 1 ? (
+        <div className="cards">
+          {currentDogs.map((e) => {
+            return (
+              <Card
+                key={e.id}
+                id={e.id}
+                name={e.name}
+                img={e.image}
+                maxWeight={e.maxWeightKg}
+                temperament={e.temperament}
+              />
+            );
+          })}
+        </div>
+      ) : (
+        <Loading />
+      )}
+      {!error.length ? (
+        <Pagination
+          dogsPerPage={dogsPerPage}
+          allDogs={allDogs.length}
+          paginado={paginado}
+          currentPage={currentPage}
+        />
+      ) : null}
     </div>
   );
 };

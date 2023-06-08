@@ -1,12 +1,16 @@
-.loading {
+.container-loading {
+  display: grid;
+  place-items: center;
   margin-top: 5rem;
-  background: url("../img/mk8.jpg");
-  width: 500px;
-  height: 500px;
-  background-repeat: no-repeat;
 }
 
 .loading {
+  background: url("../img/mk8.jpg");
+  width: 600px;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   animation: rotation 5s infinite linear;
 }
 
@@ -17,4 +21,27 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+@media all and (max-width: 479px) {
+  .loading {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .loading {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media all and (min-width: 960px) and (max-width: 1899px) {
+}
+
+@media all and (min-width: 1500px) {
 }
