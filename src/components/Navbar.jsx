@@ -129,9 +129,10 @@ const Navbar = () => {
           </button>
         )}
         {activeBurger && (
-          <button onClick={() => setActiveBurger(!activeBurger)}>
-            <img src="/close.svg" className="close-burger" alt="icon close"/>
-          </button>
+          <div
+            className="close-burger"
+            onClick={() => setActiveBurger(!activeBurger)}
+          ></div>
         )}
       </>
     );
@@ -141,12 +142,12 @@ const Navbar = () => {
     <div className="navbar">
       <Search />
 
-      <div className={activeBurger ? "burger-nav" : "burger-hidden"}>
+      <div className={activeBurger ? "burger-nav" : "burger-nav burger-hidden"}>
         <div className="backG-burgerNav">{NavBarList()}</div>
       </div>
       {!activeBurger && (
         <div
-          className={"switch-burger"}
+          className={"switch-burger"} 
           onClick={() => setActiveBurger(!activeBurger)}
         ></div>
       )}

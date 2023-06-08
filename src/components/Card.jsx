@@ -6,7 +6,7 @@ const Card = ({ id, name, img, maxWeight, temperament }) => {
   return (
     <div className="card" key={id}>
       <Link to={`/${id}`}>
-          <img className="imgCard" src={img} alt={`Img of ${name}`} />
+        <img className="imgCard" src={img} alt={`Img of ${name}`} />
 
         <h1 className="nameCard">{name}</h1>
 
@@ -14,7 +14,7 @@ const Card = ({ id, name, img, maxWeight, temperament }) => {
           <p className="temperCard">Temperaments</p>
           <div className="tempersCard">
             {temperament.map((e) => {
-              return <p>✔ {e}</p>;
+              return <p key={e}>✔ {e}</p>;
             })}
           </div>
         </div>
