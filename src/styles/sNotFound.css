@@ -1,18 +1,55 @@
 .sNotF {
-  height: 60vh;
-  width: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 80%),
+  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 100%),
     url("../img/mk9.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 10px;
+  margin: 1rem;
   margin-top: 2rem;
+  box-shadow: var(--cian) 0px 0px 2px;
 }
-.letras {
-    font-size: 2rem;
-    color: #fff;
+.letters {
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--cian);
+}
+
+@media all and (max-width: 479px) {
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+  .sNotF {
+    width: 90vw;
+  }
+  .letters {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 960px) and (max-width: 1899px) {
+  .sNotF {
+    width: 90vw;
+  }
+  .letters {
+    font-size: 1.7rem;
+  }
+}
+
+@media all and (min-width: 1500px) {
+  .sNotF {
+    width: 90vw;
+  }
+  .letters {
+    font-size: 3rem;
+  }
 }

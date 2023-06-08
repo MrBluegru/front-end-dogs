@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, #2b2b2b41 0%, #0000005f 90%),
+  background: linear-gradient(to bottom, #1a191941 0%, #0000005f 90%),
     url("../img/mk11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .title {
@@ -20,7 +20,6 @@
 
 .cards {
   display: grid;
-  height: 100vh;
   transform-origin: top;
   margin-top: 1rem;
 }
@@ -39,6 +38,9 @@
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
+  .home {
+    overflow-x: hidden;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 959px) {

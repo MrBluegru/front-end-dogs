@@ -35,19 +35,19 @@ const Home = () => {
   };
 
   return (
-    <div className="container-home">
+    <div>
       <div className="home">
-        <Link to={`/`} className="linkh">
+        <Link to={`/`}>
           <p className="title">Dogs APP</p>
         </Link>
 
         <Navbar />
 
-        <div className="cards">
-          {error.length ? (
-            <SNotFound />
-          ) : currentDogs.length >= 1 ? (
-            currentDogs.map((e) => {
+        {error.length ? (
+          <SNotFound />
+        ) : currentDogs.length >= 1 ? (
+          <div className="cards">
+            {currentDogs.map((e) => {
               return (
                 <Card
                   key={e.id}
@@ -58,23 +58,21 @@ const Home = () => {
                   temperament={e.temperament}
                 />
               );
-            })
-          ) : (
-            <Loading />
-          )}
-        </div>
-        <div className="paginado">
-          {!error.length ? (
-            <Pagination
-              dogsPerPage={dogsPerPage}
-              allDogs={allDogs.length}
-              paginado={paginado}
-              currentPage={currentPage}
-            />
-          ) : (
-            ``
-          )}
-        </div>
+            })}
+          </div>
+        ) : (
+          <Loading />
+        )}
+        {!error.length ? (
+          <Pagination
+            dogsPerPage={dogsPerPage}
+            allDogs={allDogs.length}
+            paginado={paginado}
+            currentPage={currentPage}
+          />
+        ) : (
+          ``
+        )}
       </div>
     </div>
   );
