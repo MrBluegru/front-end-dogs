@@ -12,25 +12,68 @@
   background-size: cover;
 }
 
-.nro1 {
-  font-size: 4rem;
-  font-weight: bolder;
-  color: white;
-}
-.nro2 {
-  font-size: 2rem;
-  color: white;
-
-}
-.nro3 {
-  font-size: 2.5rem;
-  font-weight: bolder;
-  border-radius: 15px;
-  background-color: rgb(170, 117, 45);
+.blurDiv-errorC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  background-color: #ffffff33;
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
 }
 
-.nro3:hover {
-    background-color: rgb(54, 113, 173);
-    cursor: pointer;
-    color: #fff;
+.title-errorC {
+  font-size: 2.3rem;
+  font-weight: bolder;
+  font-family: var(--type-secondary);
+  color: var(--cian);
+}
+
+.message-errorC {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.goBack-errorC {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  border-radius: 10px;
+  background-color: var(--blue);
+  padding: 1rem;
+  box-shadow: var(--cian) 0 0 4px;
+}
+
+.goBack-errorC:hover {
+  background-color: var(--cian);
+  color: var(--blue);
+  cursor: pointer;
+}
+
+@media all and (max-width: 479px) {
+  .title-errorC {
+    font-size: 1.4rem;
+  }
+  .message-errorC {
+    font-size: 1rem;
+  
+  }
+  .goBack-errorC{
+    font-size: 1rem;
+    padding: .8rem;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+}
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+}
+
+@media all and (min-width: 960px) and (max-width: 1899px) {
+}
+
+@media all and (min-width: 1500px) {
 }
