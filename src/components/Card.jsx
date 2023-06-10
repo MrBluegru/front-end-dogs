@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/card.css";
 
-const Card = ({ id, name, img, maxWeight, temperament }) => {
+const Card = ({ id, name, img, maxWeight, temperament, isPreview = false }) => {
   return (
     <div className="card" key={id}>
-      <Link to={`/${id}`}>
+      <Link to={!isPreview ? `/${id}` : null}>
         <img className="imgCard" src={img} alt={`Img of ${name}`} />
 
         <h1 className="nameCard">{name}</h1>

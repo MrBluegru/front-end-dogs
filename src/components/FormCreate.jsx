@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { getTempers, createDogs } from "../redux/action";
-import CardCD from "../components/CardCD";
+import Card from "../components/Card";
 import "../styles/formCreate.css";
 
 const FormCreate = () => {
@@ -227,12 +227,13 @@ const FormCreate = () => {
       <div className="threeColumns">
         <div className="imgColum1">
           {input.name ? (
-            <CardCD
+            <Card
               id={input.name}
               name={input.name}
               img={input.image}
-              maxWeight={input.maxWeightKg}
+              maxWeight={input.maxWeightKg} 
               temperament={input.temper}
+              isPreview={true}
             />
           ) : (
             ``
@@ -278,7 +279,11 @@ const FormCreate = () => {
                 value={input.minHeightCm}
                 onChange={(e) => handleChange(e)}
               />
-              {input.minHeightCm ? <p className="errorsMsj">{errorMinH}</p> : ``}
+              {input.minHeightCm ? (
+                <p className="errorsMsj">{errorMinH}</p>
+              ) : (
+                ``
+              )}
             </div>
 
             <div className="maxHF">
@@ -291,7 +296,11 @@ const FormCreate = () => {
                 value={input.maxHeightCm}
                 onChange={(e) => handleChange(e)}
               />
-              {input.maxHeightCm ? <p className="errorsMsj">{errorMaxH}</p> : ``}
+              {input.maxHeightCm ? (
+                <p className="errorsMsj">{errorMaxH}</p>
+              ) : (
+                ``
+              )}
             </div>
 
             <p className="titleWeight">Weight</p>
@@ -306,7 +315,11 @@ const FormCreate = () => {
                 value={input.minWeightKg}
                 onChange={(e) => handleChange(e)}
               />
-              {input.minWeightKg ? <p className="errorsMsj">{errorMinW}</p> : ``}
+              {input.minWeightKg ? (
+                <p className="errorsMsj">{errorMinW}</p>
+              ) : (
+                ``
+              )}
             </div>
 
             <div className="maxWf">
@@ -319,7 +332,11 @@ const FormCreate = () => {
                 value={input.maxWeightKg}
                 onChange={(e) => handleChange(e)}
               />
-              {input.maxWeightKg ? <p className="errorsMsj">{errorMaxW}</p> : ``}
+              {input.maxWeightKg ? (
+                <p className="errorsMsj">{errorMaxW}</p>
+              ) : (
+                ``
+              )}
             </div>
 
             <div className="temperF">
@@ -338,7 +355,12 @@ const FormCreate = () => {
                 {dogsT.map((e) => {
                   if (input.temper.length > 15) {
                     return (
-                      <option key={e.name} disabled="disabled" default={true} value="">
+                      <option
+                        key={e.name}
+                        disabled="disabled"
+                        default={true}
+                        value=""
+                      >
                         Limite de 15 temperamentos alcanzado
                       </option>
                     );
@@ -366,7 +388,11 @@ const FormCreate = () => {
                 value={input.minLifeSpanYears}
                 onChange={(e) => handleChange(e)}
               />
-              {input.minLifeSpanYears ? <p className="errorsMsj">{errorMinLSpan}</p> : ``}
+              {input.minLifeSpanYears ? (
+                <p className="errorsMsj">{errorMinLSpan}</p>
+              ) : (
+                ``
+              )}
             </div>
             <div className="maxLSf">
               <label>Max</label>
@@ -378,7 +404,11 @@ const FormCreate = () => {
                 value={input.maxLifeSpanYears}
                 onChange={(e) => handleChange(e)}
               />
-              {input.maxLifeSpanYears ? <p className="errorsMsj">{errorMaxLSpan}</p> : ``}
+              {input.maxLifeSpanYears ? (
+                <p className="errorsMsj">{errorMaxLSpan}</p>
+              ) : (
+                ``
+              )}
             </div>
 
             <div className="btnCf">
