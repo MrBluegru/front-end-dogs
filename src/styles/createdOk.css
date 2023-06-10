@@ -12,40 +12,79 @@
   background-size: cover;
 }
 
+.back-createOk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff44;
+  backdrop-filter: blur(18px);
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
 .newD {
-  color: #fff;
-  font-size: 4rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 800;
+  margin: 1rem 0;
+  color: var(--blue);
 }
 
 .btns {
   display: flex;
-  flex-direction: initial;
-  justify-content: center;
 }
 
 .btnGoH {
   margin: 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 5px;
-  background-color: rgb(25, 71, 123);
-  color: #fff;
-  border: none;
   padding: 5px;
+  font-weight: 700;
+  background-color: var(--blue);
+  padding: 3px 6px;
+  cursor: pointer;
 }
 .btnGoH:hover {
-  background-color: #fff;
-  color: rgb(54, 113, 173);
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 .btnAdd {
   margin: 5px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 5px;
-  background-color: rgb(51, 125, 133);
-  border: none;
-  padding: 5px;
+  font-weight: 700;
+  background-color: var(--green);
+  padding: 3px 6px;
+  cursor: pointer;
 }
 .btnAdd:hover {
-  background-color: #fff;
-  color: rgb(51, 125, 133);
+  background-color: var(--white);
+  color: var(--green);
+}
+
+@media all and (max-width: 479px) {
+  .newD {
+    font-size: 1.1rem;
+  }
+  .btnGoH {
+    font-size: 1.2rem;
+  }
+  .btnAdd {
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .newD {
+    font-size: 1.5rem;
+  }
+  .btnGoH {
+    font-size: 1.3rem;
+  }
+  .btnAdd {
+    font-size: 1.3rem;
+  }
 }

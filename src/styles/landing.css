@@ -22,14 +22,13 @@
   border-radius: 8px;
   margin: 2rem 0rem;
   cursor: pointer;
-  color: "#fff";
   font-size: 2rem;
   font-family: fantasy;
   background-color: rgba(25, 71, 123, 0.772);
 }
 
 .btn_go:hover {
-  background-color: #fff;
+  background-color: var(--white);
   color: rgba(25, 71, 123, 0.772);
 }
 
