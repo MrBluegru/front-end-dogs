@@ -14,7 +14,7 @@ const Card = ({ id, name, img, maxWeight, temperament }) => {
           <p className="temperCard">Temperaments</p>
           <div className="tempersCard">
             {temperament.map((e) => {
-              return <p key={e}>✔ {e}</p>;
+              return <p key={e}>{e}</p>;
             })}
           </div>
         </div>

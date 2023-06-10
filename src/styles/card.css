@@ -10,6 +10,7 @@
   border-radius: 10px;
   backdrop-filter: blur(4px);
   background-color: var(--blue-background);
+  box-shadow: var(--cian) 0 0 2px;
 }
 
 .card:hover {

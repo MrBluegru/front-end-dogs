@@ -121,9 +121,9 @@ body {
   font-family: var(--type-primary);
   color: var(--black);
   line-height: 1.4em;
-  -webkit-hyphens: auto;
+  /* -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; */
 }

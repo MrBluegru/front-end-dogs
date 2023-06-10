@@ -1,4 +1,4 @@
-.detailsD {
+.details-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,78 +12,104 @@
   overflow-y: scroll;
 }
 
-.detaisS {
-  background-color: rgba(68, 93, 194, 0.361);
+.details-card {
+  background-color: var(--blue-background);
   backdrop-filter: blur(8px);
-  width: 50%;
-  height: 80%;
+  margin: 0.5rem 1rem;
   border-radius: 10px;
   color: #fff;
-  padding-bottom: 8rem 
+  padding-bottom: 2rem;
 }
 
-.btnB {
-  margin-top: 3px;
-  margin-right: 5px;
-  font-size: 1.2rem;
-  border-radius: 100%;
-  background-color: rgb(68, 93, 194);
-  color: #fff;
-  border: none;
+.imgD {
+  height: 570px;
+  max-height: 570px;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
 }
 
-.btnB:hover {
-  font-size: 1.2rem;
-  background-color: rgb(211, 73, 209);
+.info-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .nameTitle {
+  padding: 1rem 0;
   font-size: 2rem;
   font-weight: 800;
+  color: var(--cian);
 }
 
 .titleBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-}
-.imgD {
-  height: 465px;
-  min-height: 265px;
-  border-radius: 5px;
+  margin: 1rem 0;
 }
 
 .hAndW {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
 }
 
 .hDg {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.wDg {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.temperG {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.lifeSD {
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-
-.temperText {
-  font-weight: 800;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 
 .hwText {
   font-weight: 800;
+  color: var(--cian);
+}
+
+.wDg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.temperText {
+  text-align: center;
+  font-weight: 800;
+  padding-top: 1rem;
+  color: var(--cian);
+}
+
+.temperG {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.lifeSD {
+  text-align: center;
+  font-weight: 800;
+  padding-top: 1rem;
+  color: var(--cian);
+}
+
+.btn-details-gB {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.btnB {
+  font-size: 1.5rem;
+  border-radius: 100%;
+  padding: 0 4px;
+  background-color: var(--cian);
+  color: var(--blue);
+  box-shadow: #000 0 0 2px;
+  cursor: pointer;
+}
+
+.btnB:hover {
+  color: var(--cian);
+  background-color: var(--blue);
+  box-shadow: #fff 0 0 8px;
 }

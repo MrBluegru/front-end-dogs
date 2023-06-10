@@ -15,48 +15,51 @@ const Details = () => {
     dispach(getDogsId(id));
   }, [dispach, id]);
 
-  
   if (dogsDet !== `Non-existent`) {
     return (
-      <div className="detailsD">
+      <div className="details-container">
         {Object.entries(dogsDet).length ? (
-          <div className="detaisS">
-            <div className="titleBtn">
-              <Link to={"/home"}>
-                <button className="btnB">↩</button>
-              </Link>
-              <p className="nameTitle">{dogsDet.name}</p>
-            </div>
+          <div className="details-card">
             <img
               className="imgD"
               src={dogsDet.image}
               alt={`Pic of ${dogsDet.name}`}
             />
-            <div className="hAndW">
-              <div className="hDg">
-                <p>cm. {dogsDet.minHeightCm}</p>
-                <p className="hwText">⇣ Height ⇡</p>
-                <p>cm. {dogsDet.maxHeightCm}</p>
+            <div className="info-details">
+              <p className="nameTitle">{dogsDet.name}</p>
+
+              <div className="hAndW">
+                <div className="hDg">
+                  <p>cm. {dogsDet.minHeightCm}</p>
+                  <p className="hwText">⇣ Height ⇡</p>
+                  <p>cm. {dogsDet.maxHeightCm}</p>
+                </div>
+
+                <div className="wDg">
+                  <p>kg. {dogsDet.minWeightKg}</p>
+                  <p className="hwText">▼ Weight ▲</p>
+                  <p>kg. {dogsDet.maxWeightKg}</p>
+                </div>
               </div>
 
-              <div className="wDg">
-                <p>kg. {dogsDet.minWeightKg}</p>
-                <p className="hwText">▼ Weight ▲</p>
-                <p>kg. {dogsDet.maxWeightKg}</p>
+              <p className="temperText">Temperaments</p>
+              <div className="temperG">
+                {dogsDet.temperament?.map((e) => {
+                  return <p key={e}> {e}</p>;
+                })}
               </div>
-            </div>
 
-            <p className="temperText">Temperament</p>
-            <div className="temperG">
-              {dogsDet.temperament?.map((e) => {
-                return <p> ✔ {e}</p>;
-              })}
-            </div>
-            <div className="lifeSD">
-              <p>
-                Life Span {dogsDet.minLifeSpanYears} -{" "}
-                {dogsDet.maxLifeSpanYears} years
-              </p>
+              <div className="lifeSD">
+                <p>
+                  Life Span {dogsDet.minLifeSpanYears} -{" "}
+                  {dogsDet.maxLifeSpanYears} years
+                </p>
+              </div>
+              <div className="btn-details-gB">
+                <Link to={"/home"}>
+                  <button className="btnB">↩</button>
+                </Link>
+              </div>
             </div>
           </div>
         ) : (

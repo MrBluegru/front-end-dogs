@@ -1,7 +1,7 @@
 .container-loading {
   display: grid;
   place-items: center;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 
 .loading {
