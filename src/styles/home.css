@@ -21,7 +21,7 @@
 .cards {
   display: grid;
   transform-origin: top;
-  margin-top: 1rem;
+  margin: 2rem 0;
   gap: 1.5rem;
 }
 

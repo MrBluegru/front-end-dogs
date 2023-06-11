@@ -62,7 +62,7 @@ const Home = () => {
       ) : (
         <Loading />
       )}
-      {!error.length ? (
+      {!error.length && currentDogs.length >= 1 ? (
         <Pagination
           dogsPerPage={dogsPerPage}
           allDogs={allDogs.length}
