@@ -1,38 +1,77 @@
 .page-item {
   display: flex;
-  margin: 2px;
-  border-radius: 5px;
-  margin: 4px 2px;
+  align-items: center;
+  margin: 1rem 0;
 }
 
-.current {
-  cursor: pointer;
-  padding: 10px 15px;
-  font-size: 1.3rem;
-  min-width: 3.5rem;
-  margin: 5px 2px;
-  border-radius: 10px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(103, 233, 247, 0.637);
+.input-paginationC {
+  min-width: 40px;
+  max-width: 40px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-.rest {
-  cursor: pointer;
-  padding: 10px 15px;
-  min-width: 3.5rem;
-  font-size: 1.3rem;
-  margin: 5px 2px;
+.input-paginationC:focus {
+  outline: none;
+}
+
+.inpt-text-pagination {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 80px;
   border-radius: 10px;
-  color: rgb(244, 244, 244);
-  background-color: rgb(25, 71, 123);
+  margin-right: 4px;
+}
+
+.inpt-text-pagination:hover {
+  box-shadow: var(--cian) 0 0 2px;
+}
+
+.btn-go-pagination {
+  cursor: pointer;
+  padding: 0.5rem 0.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 2.5rem;
+  border-radius: 10px;
+  color: var(--blue);
+  background-color: var(--cian);
+  margin-right: 4px;
+  box-shadow: var(--cian) 0 0 2px;
+}
+
+.btn-go-pagination:hover {
+  background-color: var(--blue);
+  color: var(--cian);
 }
 
 .nex-previous {
-  padding: 10px 15px;
-  font-size: 1rem;
-  margin: 5px 2px;
+  padding: 0.5rem 0.1rem;
+  margin-right: 4px;
+  min-width: 2.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   border-radius: 10px;
-  color: rgba(103, 233, 247, 0.637);
-  background-color: rgb(25, 71, 123);
+  color: var(--cian);
+  background-color: var(--blue);
+  box-shadow: var(--cian) 0 0 2px;
+}
+
+.nex-previous:hover {
+  color: var(--blue);
+  background-color: var(--cian);
+}
+
+.blocked {
+  padding: 0.5rem 0.1rem;
+  margin-right: 4px;
+  min-width: 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: red 0 0 2px;
+  background-color: #000;
+  color: red;
+  cursor: no-drop;
 }
