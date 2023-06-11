@@ -37,11 +37,12 @@
 }
 
 .threeColumns {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-template-areas: "imgColumn1 formularioC2 temperC3";
+  gap: 1rem;
 }
 
 .createForm {
@@ -54,6 +55,7 @@
   border-radius: 10px;
   backdrop-filter: blur(10px);
   background-color: var(--blue-background);
+  grid-area: createForm;
 }
 
 .nameF {
@@ -191,13 +193,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 90%;
   padding: 0.5rem;
-  margin-top: 2rem;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   background-color: rgba(25, 71, 123, 0.443);
+  grid-area: tempersSelectsC3;
 }
 
 .btnsTemps {
@@ -222,28 +223,89 @@
   .goBack-create {
     padding: 0.3rem;
   }
-  .threeColumns {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+
   .card-previwe-formC {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: scale(0.8);
+    grid-area: card-previwe-formC;
+  }
+  .tempersSelectsC3 {
+    max-height: 300px;
+    overflow-y: auto;
   }
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
+  .threeColumns {
+  margin-bottom: 1rem;
+  }
+  .tempersSelectsC3 {
+    max-height: 300px;
+    overflow-y: auto;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 959px) {
+  .threeColumns {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "createForm card-previwe-formC"
+      "createForm tempersSelectsC3";
+    justify-items: center;
+    gap: 2rem;
+  }
+  .createForm {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .tempersSelectsC3 {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+  }
 }
 
 @media all and (min-width: 960px) and (max-width: 1899px) {
+  .threeColumns {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "createForm card-previwe-formC"
+      "createForm tempersSelectsC3";
+    justify-items: center;
+    gap: 2rem;
+  }
+  .createForm {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .tempersSelectsC3 {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+  }
 }
 
 @media all and (min-width: 1500px) {
+  .threeColumns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-template-areas: "card-previwe-formC createForm tempersSelectsC3";
+  }
+  .tempersSelectsC3 {
+    width: 50%;
+    max-height: 700px;
+    overflow-y: auto;
+  }
 }
