@@ -22,6 +22,7 @@
   display: grid;
   transform-origin: top;
   margin-top: 1rem;
+  gap: 1.5rem;
 }
 
 @media all and (max-width: 479px) {

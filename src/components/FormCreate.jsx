@@ -90,70 +90,70 @@ const FormCreate = () => {
     url: /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi, // eslint-disable-line
   };
 
-  const validacionName = (entrada) => {
-    if (regexS.espaciosIni.test(entrada))
-      return `No puede iniciar con espacios en blanco`;
-    if (entrada.length <= 3) return `Nombre muy corto`;
-    if (entrada.length > 30) return `Nombre muy largo`;
-    if (regexS.numeros.test(entrada))
-      return `No se admite numeros en este campo`;
-    if (regexS.caracteresEsp.test(entrada))
-      return `No se admite caracteres especiales en este campo`;
+  const validacionName = (input) => {
+    if (regexS.espaciosIni.test(input))
+      return `Cannot start with blank spaces`;
+    if (input.length <= 3) return `Very short name`;
+    if (input.length > 30) return `Very long name`;
+    if (regexS.numeros.test(input))
+      return `Numbers are not allowed in this field`;
+    if (regexS.caracteresEsp.test(input))
+      return `Special characters are not allowed in this field`;
   };
-  const validacionImg = (entrada) => {
-    if (!regexS.url.test(entrada)) return `Debe ser una url valida`;
+  const validacionImg = (input) => {
+    if (!regexS.url.test(input)) return `Must be a valid url`;
   };
-  const validacionMinHeight = (entrada1, entrada2) => {
-    if (isNaN(entrada1)) return `Este campo debe completarse`;
-    if (entrada1 < 15) return `El valor minimo no puede ser menor a 15 cm.`;
-    if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 cm.`;
-    if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+  const validacionMinHeight = (input1, input2) => {
+    if (isNaN(input1)) return `This field must be completed`;
+    if (input1 < 15) return `The minimum value cannot be less than 15 cm.`;
+    if (input1 > 70) return `The minimum value cannot be greater than 70 cm.`;
+    if (input1 > input2) {
+      return `The minimum value cannot be greater than the maximum value`;
     }
   };
-  const validacionMaxHeigh = (entrada1, entrada2) => {
-    if (isNaN(entrada2)) return `Este campo debe completarse`;
-    if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 cm.`;
-    if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+  const validacionMaxHeigh = (input1, input2) => {
+    if (isNaN(input2)) return `This field must be completed`;
+    if (input2 > 100) return `The maximum value cannot be greater than 100 cm.`;
+    if (input2 < input1) {
+      return `The maximum value cannot be less than the minimum value`;
     }
   };
-  const validacionMinWeight = (entrada1, entrada2) => {
-    if (isNaN(entrada1)) return `Este campo debe completarse`;
-    if (entrada1 < 1) return `El valor minimo no puede ser menor a 1 kg.`;
-    if (entrada1 > 70) return `El valor minimo no puede ser mayor a 70 Kg.`;
-    if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+  const validacionMinWeight = (input1, input2) => {
+    if (isNaN(input1)) return `This field must be completed`;
+    if (input1 < 1) return `The minimum value cannot be less than 1 kg.`;
+    if (input1 > 70) return `The minimum value cannot be greater than 70 Kg.`;
+    if (input1 > input2) {
+      return `The minimum value cannot be greater than the maximum value`;
     }
   };
-  const validacionMaxWeight = (entrada1, entrada2) => {
-    if (isNaN(entrada2)) return `Este campo debe completarse`;
-    if (entrada2 > 100) return `El valor maximo no puede ser mayor a 100 Kg.`;
-    if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+  const validacionMaxWeight = (input1, input2) => {
+    if (isNaN(input2)) return `This field must be completed`;
+    if (input2 > 100) return `The maximum value cannot be greater than 100 Kg.`;
+    if (input2 < input1) {
+      return `The maximum value cannot be less than the minimum value`;
     }
   };
-  const validacionTempers = (entrada) => {
-    if (entrada.length < 1) {
-      return `Se requiere que al menos tenga un temperamento`;
+  const validacionTempers = (input) => {
+    if (input.length < 1) {
+      return `It is required that you at least have a temperament`;
     }
-    if (entrada.length > 15) {
-      return `No se pueden seleccionar mas de 15 temperamentos`;
-    }
-  };
-  const validacionMinLifeSpan = (entrada1, entrada2) => {
-    if (isNaN(entrada1)) return `Este campo debe completarse`;
-    if (entrada1 < 6) return `El valor minimo no puede ser menor a 6 años.`;
-    if (entrada1 > 10) return `El valor minimo no puede ser mayor a 10 años.`;
-    if (entrada1 > entrada2) {
-      return `El valor minimo no puede ser mayor que el valor maximo`;
+    if (input.length > 15) {
+      return `You cannot select more than 15 temperaments`;
     }
   };
-  const validacionMaxLifeSpan = (entrada1, entrada2) => {
-    if (isNaN(entrada2)) return `Este campo debe completarse`;
-    if (entrada2 > 16) return `El valor maximo no puede ser mayor a 16 años.`;
-    if (entrada2 < entrada1) {
-      return `El valor maximo no puede ser menor que el valor minimo`;
+  const validacionMinLifeSpan = (input1, input2) => {
+    if (isNaN(input1)) return `This field must be completed`;
+    if (input1 < 6) return `The minimum value cannot be less than 6 years`;
+    if (input1 > 10) return `The minimum value cannot be greater than 10 years`;
+    if (input1 > input2) {
+      return `The minimum value cannot be greater than the maximum value`;
+    }
+  };
+  const validacionMaxLifeSpan = (input1, input2) => {
+    if (isNaN(input2)) return `This field must be completed`;
+    if (input2 > 16) return `The maximum value cannot be greater than 16 years`;
+    if (input2 < input1) {
+      return `The maximum value cannot be less than the minimum value`;
     }
   };
 
@@ -217,58 +217,49 @@ const FormCreate = () => {
 
   return (
     <div className="formCreate">
-      <div className="titulo">
-        <Link className="homeLink" to="/home">
-          <button className="volver">🏠</button>
+      <div className="title-btn-create">
+        <Link to="/home">
+          <button className="goBack-create">🏠</button>
         </Link>
-        <p className="title">New Dog</p>
+        <p className="title-form-create">New Dog</p>
       </div>
 
       <div className="threeColumns">
-        <div className="imgColum1">
-          {input.name ? (
-            <Card
-              id={input.name}
-              name={input.name}
-              img={input.image}
-              maxWeight={input.maxWeightKg} 
-              temperament={input.temper}
-              isPreview={true}
+        <form className="createForm" onSubmit={(e) => newDog(e)}>
+          <div className="nameF">
+            <label className="subtitle-formFC">Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              className="inputFC"
+              value={input.name}
+              onChange={(e) => handleChangeNI(e)}
             />
-          ) : (
-            ``
-          )}
-        </div>
-        <div className="formmC2">
-          <form className="createForm" onSubmit={(e) => newDog(e)}>
-            <div className="nameF">
-              <label>Name</label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                className="inputFC"
-                value={input.name}
-                onChange={(e) => handleChangeNI(e)}
-              />
-              {input.name ? <p className="errorsMsj">{errorName}</p> : ``}
-            </div>
+          </div>
+          <div className="error-containerFC">
+            {input.name ? <p className="errorsMsj">{errorName}</p> : ``}
+          </div>
 
-            <div className="imgF">
-              <label>Image</label>
-              <input
-                id="image"
-                type="text"
-                name="image"
-                className="inputFC"
-                value={input.image}
-                onChange={(e) => handleChangeNI(e)}
-              />
-              {input.image ? <p className="errorsMsj">{errorImg}</p> : ``}
-            </div>
+          <div className="imgF">
+            <label className="subtitle-formFC">Image</label>
+            <input
+              id="image"
+              type="text"
+              name="image"
+              className="inputFC"
+              value={input.image}
+              onChange={(e) => handleChangeNI(e)}
+            />
+          </div>
 
-            <p className="titleHeight">Height</p>
+          <div className="error-containerFC">
+            {input.image ? <p className="errorsMsj">{errorImg}</p> : ``}
+          </div>
 
+          <p className="subtitle-formFC">Height</p>
+
+          <div className="min-max-heightFC">
             <div className="minHF">
               <label>Min</label>
               <input
@@ -279,6 +270,8 @@ const FormCreate = () => {
                 value={input.minHeightCm}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.minHeightCm ? (
                 <p className="errorsMsj">{errorMinH}</p>
               ) : (
@@ -296,15 +289,19 @@ const FormCreate = () => {
                 value={input.maxHeightCm}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.maxHeightCm ? (
                 <p className="errorsMsj">{errorMaxH}</p>
               ) : (
                 ``
               )}
             </div>
+          </div>
 
-            <p className="titleWeight">Weight</p>
+          <p className="subtitle-formFC">Weight</p>
 
+          <div className="min-max-weightFC">
             <div className="minWf">
               <label>Min</label>
               <input
@@ -315,6 +312,8 @@ const FormCreate = () => {
                 value={input.minWeightKg}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.minWeightKg ? (
                 <p className="errorsMsj">{errorMinW}</p>
               ) : (
@@ -332,52 +331,19 @@ const FormCreate = () => {
                 value={input.maxWeightKg}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.maxWeightKg ? (
                 <p className="errorsMsj">{errorMaxW}</p>
               ) : (
                 ``
               )}
             </div>
+          </div>
 
-            <div className="temperF">
-              {/* <label>Temperaments </label> */}
-              <select
-                id="temper"
-                name="temper"
-                className="selectFC"
-                value={input.temper}
-                onChange={(e) => handleSelect(e)}
-              >
-                <option hidden>Select a temperament</option>
-                <option disabled="disabled" default={true} value="">
-                  Select a temperament
-                </option>
-                {dogsT.map((e) => {
-                  if (input.temper.length > 15) {
-                    return (
-                      <option
-                        key={e.name}
-                        disabled="disabled"
-                        default={true}
-                        value=""
-                      >
-                        Limite de 15 temperamentos alcanzado
-                      </option>
-                    );
-                  } else if (!input.temper.includes(e.name)) {
-                    return (
-                      <option value={e.name} key={e.id}>
-                        {e.name}
-                      </option>
-                    );
-                  }
-                })}
-              </select>
-              {/* {input.temper ? <p className="errorsMsj">{errorTempers}</p> : ``} */}
-            </div>
+          <p className="subtitle-formFC">Life Span</p>
 
-            <p className="titleLS">Life Span</p>
-
+          <div className="min-max-lifeSFC">
             <div className="minLSf">
               <label>Min</label>
               <input
@@ -388,12 +354,15 @@ const FormCreate = () => {
                 value={input.minLifeSpanYears}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.minLifeSpanYears ? (
                 <p className="errorsMsj">{errorMinLSpan}</p>
               ) : (
                 ``
               )}
             </div>
+
             <div className="maxLSf">
               <label>Max</label>
               <input
@@ -404,24 +373,58 @@ const FormCreate = () => {
                 value={input.maxLifeSpanYears}
                 onChange={(e) => handleChange(e)}
               />
+            </div>
+            <div className="error-containerFC">
               {input.maxLifeSpanYears ? (
                 <p className="errorsMsj">{errorMaxLSpan}</p>
               ) : (
                 ``
               )}
             </div>
+          </div>
 
-            <div className="btnCf">
-              <button
-                className="btnSCF"
-                type="submit"
-                disabled={disableDesactivate}
-              >
-                Create
-              </button>
-            </div>
-          </form>
-        </div>
+          <select
+            id="temper"
+            name="temper"
+            className="selectFC"
+            value={input.temper}
+            onChange={(e) => handleSelect(e)}
+          >
+            <option hidden>Select a temperament</option>
+            <option disabled="disabled" default={true} value="">
+              Select a temperament
+            </option>
+            {dogsT.map((e) => {
+              if (input.temper.length > 15) {
+                return (
+                  <option
+                    key={e.name}
+                    disabled="disabled"
+                    default={true}
+                    value=""
+                  >
+                    Limit of 15 temperaments reached
+                  </option>
+                );
+              } else if (!input.temper.includes(e.name)) {
+                return (
+                  <option value={e.name} key={e.id}>
+                    {e.name}
+                  </option>
+                );
+              }
+            })}
+          </select>
+
+          <button
+            className="btnSCF"
+            type="submit"
+            disabled={disableDesactivate}
+          >
+            Create
+          </button>
+        </form>
+
         {input.temper.length ? (
           <div className="tempersSelectsC3">
             <p>Selected Temperaments</p>
@@ -435,6 +438,21 @@ const FormCreate = () => {
         ) : (
           ``
         )}
+
+        <div className="card-previwe-formC">
+          {input.name ? (
+            <Card
+              id={input.name}
+              name={input.name}
+              img={input.image}
+              maxWeight={input.maxWeightKg}
+              temperament={input.temper}
+              isPreview={true}
+            />
+          ) : (
+            ``
+          )}
+        </div>
       </div>
     </div>
   );
