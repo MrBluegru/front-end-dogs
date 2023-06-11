@@ -42,6 +42,14 @@ const Home = () => {
 
       <Navbar />
 
+      {!error.length && currentDogs.length >= 1 ? (
+        <Pagination
+          dogsPerPage={dogsPerPage}
+          allDogs={allDogs.length}
+          paginado={paginado}
+          currentPage={currentPage}
+        />
+      ) : null}
       {error.length ? (
         <SNotFound />
       ) : currentDogs.length >= 1 ? (
@@ -62,14 +70,6 @@ const Home = () => {
       ) : (
         <Loading />
       )}
-      {!error.length && currentDogs.length >= 1 ? (
-        <Pagination
-          dogsPerPage={dogsPerPage}
-          allDogs={allDogs.length}
-          paginado={paginado}
-          currentPage={currentPage}
-        />
-      ) : null}
     </div>
   );
 };
