@@ -8,7 +8,13 @@ const Card = ({ id, name, img, maxWeight, temperament, isPreview = false }) => {
       <Link to={!isPreview ? `/${id}` : null}>
         <img
           className="imgCard"
-          src={isPreview ? img : `https://cdn2.thedogapi.com/images/${img}.jpg`}
+          src={
+            isPreview
+              ? img
+              : id !== Number
+              ? img
+              : `https://cdn2.thedogapi.com/images/${img}.jpg`
+          }
           alt={`Img of ${name}`}
         />
 
