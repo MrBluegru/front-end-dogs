@@ -11,7 +11,7 @@ const Card = ({ id, name, img, maxWeight, temperament, isPreview = false }) => {
           src={
             isPreview
               ? img
-              : id !== Number
+              : id.length > 10
               ? img
               : `https://cdn2.thedogapi.com/images/${img}.jpg`
           }
