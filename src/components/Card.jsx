@@ -6,7 +6,11 @@ const Card = ({ id, name, img, maxWeight, temperament, isPreview = false }) => {
   return (
     <div className="card" key={id}>
       <Link to={!isPreview ? `/${id}` : null}>
-        <img className="imgCard" src={img} alt={`Img of ${name}`} />
+        <img
+          className="imgCard"
+          src={isPreview ? img : `https://cdn2.thedogapi.com/images/${img}.jpg`}
+          alt={`Img of ${name}`}
+        />
 
         <h1 className="nameCard">{name}</h1>
 
