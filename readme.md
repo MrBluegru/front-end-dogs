@@ -1,4 +1,4 @@
-# Welcome to Dogs App **by Mr. Blue**
+# Dogs App
 
 Dogs App es una SPA sobre razas de perros, en la que se puede:
 
