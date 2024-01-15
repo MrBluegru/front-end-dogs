@@ -1,5 +1,10 @@
 # Dogs App
 
+<p align='center'>
+  <img src="./public/dogsApp.gif" height="600px"/>
+</p>
+
+
 Dogs App es una SPA sobre razas de perros, en la que se puede:
 
 - Consultar las razas existentes.
