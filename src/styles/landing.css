@@ -12,6 +12,13 @@
   background-size: cover;
 }
 
+.content_L {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .title-landing {
   font-family: "Ubuntu", sans-serif;
   font-weight: bolder;
@@ -32,16 +39,19 @@
   color: rgba(25, 71, 123, 0.772);
 }
 
-.imglogo {
-  height: 30%;
+.goToLinkedin {
+  display: flex;
+  align-items: center;
+  zoom: 20%;
 }
 
 @media all and (max-width: 479px) {
   .title-landing {
     font-size: 2rem;
   }
-  .imglogo {
+  .goToLinkedin {
     height: 50%;
+    zoom: 10%;
   }
 }
 
@@ -50,7 +60,7 @@
     font-size: 2.6rem;
   }
 
-  .imglogo {
+  .goToLinkedin {
     height: 50%;
   }
 }
@@ -63,7 +73,7 @@
     margin-top: 3rem;
   }
 
-  .imglogo {
+  .goToLinkedin {
     height: 35%;
   }
 }
@@ -77,7 +87,7 @@
     margin-top: 4rem;
   }
 
-  .imglogo {
+  .goToLinkedin {
     height: 35%;
   }
 }
@@ -90,8 +100,8 @@
   .btn_go {
     margin-top: 5rem;
   }
-  
-  .imglogo {
+
+  .goToLinkedin {
     height: 35%;
   }
 }
