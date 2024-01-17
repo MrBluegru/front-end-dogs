@@ -1,7 +1,7 @@
 # Dogs App
 
 <p align='center'>
-  <img src="./public/dogsApp.gif" height="600px"/>
+  <!-- <img src="./public/dogsApp.gif" height="600px"/> -->
 </p>
 
 

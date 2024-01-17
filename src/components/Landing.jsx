@@ -10,8 +10,8 @@ const Landing = () => {
       <div className="content_L">
         <h1 className="title-landing">Welcome to Dogs App</h1>
 
-        <Link to={`/home`} className="btn_go">
-          <button>Start</button>
+        <Link to={`/home`}>
+          <button className="btn_go">Start</button>
         </Link>
 
         <a
@@ -20,7 +20,7 @@ const Landing = () => {
           rel="noreferrer"
           className="goToLinkedin"
         >
-          <img src={by} alt="by R03M" />
+          <img  src={by} alt="by R03M" />
         </a>
       </div>
     </div>
