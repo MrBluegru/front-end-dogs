@@ -22,8 +22,12 @@ const Details = () => {
           <div className="details-card">
             <img
               className="imgD"
-              src={dogsDet.image}
-              alt={`Pic of ${dogsDet.name}`}
+              src={
+                dogsDet.id.length > 10
+                  ? dogsDet.image
+                  : `https://cdn2.thedogapi.com/images/${dogsDet.image}.jpg`
+              }
+              alt={`Img of ${dogsDet.name}`}
             />
             <div className="info-details">
               <p className="nameTitle">{dogsDet.name}</p>
